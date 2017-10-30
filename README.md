@@ -71,3 +71,14 @@ You can withdraw money to the account using bank.withdraw(amount) and passing an
 At any point you can check your balance using bank.balance
 
 To generate a statement for all transactions use bank.print_statement
+
+Tech
+-----------
+Ruby gems
+
+gem 'rspec'
+gem 'rubocop'
+gem 'simplecov', require: false, group: :test
+gem 'simplecov-console', require: false, group: :test
+
+Test with RSpec

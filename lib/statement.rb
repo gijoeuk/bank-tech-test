@@ -6,6 +6,6 @@ class Statement
   end
 
   def print_transactions
-    @transactions.each{|i| return i.date.to_s + "||" + i.amount.to_s + "||" + i.balance.to_s}
+    @transactions.each{|i| return "#{i.date} || #{i.credit} || #{i.debit} || #{i.balance.to_s}"}
   end
 end

@@ -2,18 +2,22 @@ require 'Transaction'
 
 describe 'Transaction' do
   let(:transaction) { Transaction.new(1000, 1000) }
-  let(:date) { Date.new }
+  let(:date) { Date.new.strftime("%D") }
   describe '#initialize' do
     it 'initializes with a transaction date' do
       expect(transaction.date).to eq(date)
     end
 
-    it 'initializes with a transaction amount equal to amount passed in' do
-      expect(transaction.amount).to eq(1000)
+    it 'initializes with a debit amount equal to empty string' do
+      expect(transaction.debit).to eq("")
     end
 
-    it 'initializes with a balance amount equal to balance passed in' do
-      expect(transaction.amount).to eq(1000)
+    it 'initializes with a balance true at the time transaction was created' do
+      expect(transaction.balance).to eq(1000)
+    end
+
+    it 'knows if amount is a credit or debit' do
+      expect(transaction.credit).to eq("1000")
     end
   end
 end

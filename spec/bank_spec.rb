@@ -38,7 +38,7 @@ describe 'Bank' do
     it 'enables account holder to print stament of all transactions' do
       bank.deposit(1000)
       bank.withdraw(500)
-      expect(bank.print_statement).to eq('date || credit || debit || balance')
+      expect(bank.print_statement).to eq('date || credit || debit || balance\n date || 1000 |||| 1000')
     end
   end
 end

@@ -74,6 +74,12 @@
         1,
         1,
         null,
+        null,
+        1,
+        null,
+        1,
+        5,
+        null,
         null
       ],
       "/Users/joeingram/projects/week10/bank-tech-test/lib/transaction.rb": [
@@ -84,6 +90,14 @@
         1,
         0,
         0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
         0,
         null,
         null
@@ -110,7 +124,7 @@
         null,
         null,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -128,9 +142,13 @@
         1,
         null,
         1,
-        4,
+        5,
         2,
         1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -151,13 +169,21 @@
         1,
         1,
         1,
-        8,
-        8,
-        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        null,
+        null,
+        1,
+        null,
+        1,
+        9,
         null,
         null
       ]
     },
-    "timestamp": 1509375297
+    "timestamp": 1509379273
   }
 }
