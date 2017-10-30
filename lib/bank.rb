@@ -1,4 +1,5 @@
 require 'date'
+require './lib/transaction.rb'
 
 class Bank
   attr_reader :balance, :transactions
@@ -10,7 +11,8 @@ class Bank
 
   def deposit(amount)
     @balance += amount
-    @transactions.push([Date.new, amount, @balance])
+    @transaction = Transaction.new(amount, @balance)
+    @transactions.push(@transaction)
   end
 
   def withdraw(amount)
