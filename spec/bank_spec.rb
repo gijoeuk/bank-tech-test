@@ -24,7 +24,7 @@ describe 'Bank' do
 
     it 'adds date to each deposit' do
       bank.deposit(1000)
-      expect(bank.transactions).to eq([Date.new, 1000])
+      expect(bank.transactions).to eq([[Date.new, 1000]])
     end
   end
 
@@ -33,6 +33,12 @@ describe 'Bank' do
       bank.deposit(1000)
       bank.withdraw(500)
       expect(bank.balance).to eq(500)
+    end
+
+    it 'adds date to each withdrawal' do
+      bank.deposit(2000)
+      bank.withdraw(1000)
+      expect(bank.transactions).to eq([[Date.new, 2000],[Date.new, -1000]])
     end
   end
 end
