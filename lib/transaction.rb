@@ -7,4 +7,8 @@ class Transaction
     @amount = amount
     @balance = balance
   end
+
+  def details
+    [@date, @amount, @balance]
+  end
 end

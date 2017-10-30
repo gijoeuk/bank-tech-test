@@ -19,8 +19,8 @@ Planning stage 1
 
 Nouns
   Bank
+  Transaction
   Statement
-  maybe Transaction too
 
 Verbs
   Deposit

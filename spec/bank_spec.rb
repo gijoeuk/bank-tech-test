@@ -27,10 +27,19 @@ describe 'Bank' do
   end
 
   describe '#withdraw' do
-    it 'enables account to withdraw funds' do
+    it 'enables account holder to withdraw funds' do
       bank.deposit(1000)
       bank.withdraw(500)
       expect(bank.balance).to eq(500)
+    end
+  end
+
+  describe '#print_statement' do
+    it 'enables account holder to print stament of all transactions' do
+      bank.deposit(1000)
+      bank.withdraw(500)
+      p "Transaction #{bank.transactions[0].details[0]}"
+      expect(bank.print_statement).to eq('date || credit || debit || balance')
     end
   end
 end

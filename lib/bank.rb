@@ -17,9 +17,11 @@ class Bank
 
   def withdraw(amount)
     @balance -= amount
-    @transactions.push([Date.new, -amount, @balance])
+    @transaction = Transaction.new(-amount, @balance)
+    @transactions.push(@transaction)
   end
 
-  def statement
+  def print_statement
+    return 'date || credit || debit || balance'
   end
 end
