@@ -9,6 +9,12 @@ And a deposit of 2000 on 13-01-2012
 And a withdrawal of 500 on 14-01-2012
 When she prints her bank statement
 Then she would see
+
+date || credit || debit || balance
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
+
 Planning stage 1
 
 Nouns
@@ -30,10 +36,12 @@ I want to create a bank account
 As an account holder
 so that I can keep my money safe
 I want to add money to my account
+    Done- 3rd test confirms deposit method
 
 As an account holder
 so that I can access my funds
 I want to withdraw money from my account
+  Done- 4th test confirms withdraw method
 
 As an account holder
 To help me remember transactions

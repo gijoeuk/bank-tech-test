@@ -11,9 +11,15 @@ describe 'Bank' do
       expect(bank.balance).to eq(0)
     end
 
-    it 'enables account older to deposit finds' do
+    it 'enables account holder to deposit funds' do
       bank.deposit(1000)
       expect(bank.balance).to eq(1000)
+    end
+
+    it 'enables account to withdraw funds' do
+      bank.deposit(1000)
+      bank.withdraw(500)
+      expect(bank.balance).to eq(500)
     end
   end
 end
