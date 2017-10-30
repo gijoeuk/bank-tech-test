@@ -3,7 +3,7 @@ require 'Statement'
 
 describe 'Bank' do
   let(:bank) { Bank.new }
-  let(:date) { Date.new }
+  let(:date) { Date.new}
 
   describe '#initialize' do
     it 'initializes as instance of Bank' do
@@ -37,8 +37,13 @@ describe 'Bank' do
   describe '#print_statement' do
     it 'enables account holder to print stament of all transactions' do
       bank.deposit(1000)
+      bank.deposit(2000)
       bank.withdraw(500)
-      expect(bank.print_statement).to eq('date || credit || debit || balance\n date || 1000 |||| 1000')
+      p "transactions: #{bank.statement.transactions}"
+      expect(bank.print_statement).to eq("date || credit || debit || balance
+       #{date}|| || 500.00 || 2500.00
+      #{date}|| 2000.00 || || 3000.00
+      #{date}|| 1000.00 || || 1000.00")
     end
   end
 end

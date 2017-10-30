@@ -22,12 +22,12 @@ class Bank
   end
 
   def print_statement
-    'date || credit || debit || balance\n' + @statement.print_transactions
+    "date || credit || debit || balance\n" + @statement.print_transactions
   end
 
 private
 
   def update_statement
-    @statement.transactions.push(@transaction)
+    @statement.transactions << @transaction
   end
 end
