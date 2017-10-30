@@ -16,4 +16,10 @@ describe 'Transaction' do
       expect(transaction.amount).to eq(1000)
     end
   end
+
+  describe '#details' do
+    it 'packages transaction info into array for statement' do
+      expect(transaction.details).to eq([date, 1000, 1000])
+    end
+  end
 end
