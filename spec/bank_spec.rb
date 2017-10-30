@@ -10,5 +10,10 @@ describe 'Bank' do
     it 'initializes with a balance of 0' do
       expect(bank.balance).to eq(0)
     end
+
+    it 'enables account older to deposit finds' do
+      bank.deposit(1000)
+      expect(bank.balance).to eq(1000)
+    end
   end
 end
