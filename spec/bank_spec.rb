@@ -1,4 +1,5 @@
 require 'Bank'
+require 'Statement'
 
 describe 'Bank' do
   let(:bank) { Bank.new }
@@ -13,8 +14,8 @@ describe 'Bank' do
       expect(bank.balance).to eq(0)
     end
 
-    it 'initializes with empty array of transactions' do
-      expect(bank.transactions).to eq([])
+    it 'initializes with a new instance of Statement' do
+      expect(bank.statement).to be_an_instance_of(Statement)
     end
   end
 
