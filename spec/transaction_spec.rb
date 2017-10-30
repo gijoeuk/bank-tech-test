@@ -1,8 +1,8 @@
 require 'Transaction'
 
 describe 'Transaction' do
-  let( :transaction ){ Transaction.new(1000, 1000)}
-  let( :date ) { Date.new }
+  let(:transaction) { Transaction.new(1000, 1000) }
+  let(:date) { Date.new }
   describe '#initialize' do
     it 'initializes with a transaction date' do
       expect(transaction.date).to eq(date)
