@@ -16,7 +16,7 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 
 Planning stage 1
-
+----------------
 Nouns
   Bank
   Transaction
@@ -28,6 +28,8 @@ Verbs
   Balance
   Print (Statement)
 
+User stories
+--------------
 As an account holder,
 so that I can keep track of my money,
 I want to create a bank account
@@ -54,6 +56,7 @@ So that I can see my past transactions
 I want to print a statement showing my transactions
 
 Instructions;
+-------------
 
 To use this programme you will firstly need to open IRB in the command line and require './lib/bank.rb'
 
@@ -67,4 +70,4 @@ You can withdraw money to the account using bank.withdraw(amount) and passing an
 
 At any point you can check your balance using bank.balance
 
-To generate a statement for all transactions use bank.statement
+To generate a statement for all transactions use bank.print_statement

@@ -12,16 +12,16 @@ class Bank
   def deposit(amount)
     @balance += amount
     @transaction = Transaction.new(amount, @balance)
-    @statement.transactions.push(@transaction.details)
+    @statement.transactions << @transaction
   end
 
   def withdraw(amount)
     @balance -= amount
     @transaction = Transaction.new(-amount, @balance)
-    @statement.transactions.push(@transaction.details)
+    @statement.transactions << @transaction
   end
 
   def print_statement
-    'date || credit || debit || balance'
+    'date || credit || debit || balance' + @statement.print_transactions
   end
 end
