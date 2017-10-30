@@ -20,6 +20,7 @@ Planning stage 1
 Nouns
   Bank
   Statement
+  maybe Transaction too
 
 Verbs
   Deposit
@@ -30,22 +31,23 @@ Verbs
 As an account holder,
 so that I can keep track of my money,
 I want to create a bank account
-  Done- First test passes this, second test checks default balance
+  Done
 
 
 As an account holder
 so that I can keep my money safe
 I want to add money to my account
-    Done- 3rd test confirms deposit method
+    Done
 
 As an account holder
 so that I can access my funds
 I want to withdraw money from my account
-  Done- 4th test confirms withdraw method
+  Done
 
 As an account holder
 To help me remember transactions
 I want to see the date that I made them
+  Done
 
 As an account holder
 So that I can see my past transactions

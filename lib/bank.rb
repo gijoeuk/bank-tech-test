@@ -10,11 +10,14 @@ class Bank
 
   def deposit(amount)
     @balance += amount
-    @transactions.push([Date.new, amount])
+    @transactions.push([Date.new, amount, @balance])
   end
 
   def withdraw(amount)
     @balance -= amount
-    @transactions.push([Date.new, -amount])
+    @transactions.push([Date.new, -amount, @balance])
+  end
+
+  def statement
   end
 end
