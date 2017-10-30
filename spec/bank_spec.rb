@@ -2,7 +2,6 @@ require 'Bank'
 
 describe 'Bank' do
   let( :bank ){ Bank.new }
-  let( :date){ Date.new }
   describe '#initialize' do
     it 'initializes as instance of Bank' do
       expect(bank).to be_an_instance_of(Bank)
@@ -25,7 +24,7 @@ describe 'Bank' do
 
     it 'adds date to each deposit' do
       bank.deposit(1000)
-      expect(bank.transcations).to eq([date, 1000])
+      expect(bank.transactions).to eq([Date.new, 1000])
     end
   end
 
