@@ -22,7 +22,7 @@ class Bank
   end
 
   def print_statement
-    "date || credit || debit || balance\n" + @statement.print_transactions
+    @statement.print_transactions
   end
 
 private

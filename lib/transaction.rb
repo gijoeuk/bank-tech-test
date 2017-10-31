@@ -1,7 +1,9 @@
 require './lib/statement.rb'
 
 class Transaction
+
   attr_reader :date, :credit, :debit, :balance
+
   def initialize(amount, balance)
     @date = Date.new.strftime("%D")
     @credit = ""

@@ -34,16 +34,14 @@ describe 'Bank' do
     end
   end
 
+  # chech it creates new instance and everything else that method does
+
   describe '#print_statement' do
     it 'enables account holder to print stament of all transactions' do
       bank.deposit(1000)
       bank.deposit(2000)
       bank.withdraw(500)
-      p "transactions: #{bank.statement.transactions}"
-      expect(bank.print_statement).to eq("date || credit || debit || balance
-       #{date}|| || 500.00 || 2500.00
-      #{date}|| 2000.00 || || 3000.00
-      #{date}|| 1000.00 || || 1000.00")
+      expect(bank.print_statement).to eq("date || credit || debit || balance\n#{date}|| || 500.00 || 2500.00\n#{date}|| 2000.00 || || 3000.00\n#{date}|| 1000.00 || || 1000.00")
     end
   end
 end

@@ -38,16 +38,14 @@
         null,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
-        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null
@@ -91,7 +89,9 @@
         1,
         null,
         1,
+        null,
         1,
+        null,
         1,
         0,
         0,
@@ -118,6 +118,15 @@
         1,
         0,
         null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/joeingram/projects/week10/bank-tech-test/lib/Statement.rb": [
@@ -129,7 +138,16 @@
         null,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
         2,
+        null,
+        null,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -172,7 +190,9 @@
         1,
         null,
         1,
+        null,
         1,
+        null,
         1,
         10,
         10,
@@ -189,6 +209,6 @@
         null
       ]
     },
-    "timestamp": 1509382949
+    "timestamp": 1509441696
   }
 }
