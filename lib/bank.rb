@@ -25,7 +25,7 @@ class Bank
     @statement.print_transactions
   end
 
-private
+  private
 
   def update_statement
     @statement.transactions << @transaction
