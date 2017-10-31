@@ -3,7 +3,7 @@ require 'Statement'
 
 describe 'Bank' do
   let(:bank) { Bank.new }
-  let(:date) { Date.new}
+  let(:date) { Date.new.strftime("%D")}
 
   describe '#initialize' do
     it 'initializes as instance of Bank' do
@@ -22,7 +22,7 @@ describe 'Bank' do
   describe '#deposit' do
     it 'enables account holder to deposit funds' do
       bank.deposit(1000)
-      expect(bank.balance).to eq(1000)
+      expect(bank.balance).to eq(1000.0)
     end
   end
 
@@ -30,7 +30,7 @@ describe 'Bank' do
     it 'enables account holder to withdraw funds' do
       bank.deposit(1000)
       bank.withdraw(500)
-      expect(bank.balance).to eq(500)
+      expect(bank.balance).to eq(500.0)
     end
   end
 
@@ -41,7 +41,7 @@ describe 'Bank' do
       bank.deposit(1000)
       bank.deposit(2000)
       bank.withdraw(500)
-      expect(bank.print_statement).to eq("date || credit || debit || balance\n#{date}|| || 500.00 || 2500.00\n#{date}|| 2000.00 || || 3000.00\n#{date}|| 1000.00 || || 1000.00")
+      expect(bank.print_statement).to eq("date || credit || debit || balance\n#{date}||  || 500.0 || 2500.0\n#{date}|| 2000.0 ||  || 3000.0\n#{date}|| 1000.0 ||  || 1000.0")
     end
   end
 end

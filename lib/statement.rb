@@ -6,15 +6,16 @@ class Statement
   end
 
   def header
-    puts "date || credit || debit || balance\n"
+    return "date || credit || debit || balance\n"
   end
 
   def transactions_log
-    @transactions.each{|i| return "#{i.date} || #{i.credit} || #{i.debit}|| #{i.balance}\n"}
+    to_return = ""
+    @transactions.reverse.each{|i| to_return += "#{i.date}|| #{i.credit} || #{i.debit} || #{i.balance}\n"}
+    to_return
   end
 
   def print_transactions
-    self.header
-    self.transactions_log
+    header + transactions_log
   end
 end

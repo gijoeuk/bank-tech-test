@@ -9,12 +9,12 @@ class Transaction
     @credit = ""
     @debit = ""
     update_credit_debit(amount)
-    @balance = balance
+    @balance = balance.to_f
   end
 
   private
 
   def update_credit_debit(amount)
-    amount < 0 ? @debit = amount.to_s : @credit = amount.to_s
+    amount < 0 ? @debit = -amount.to_f : @credit = amount.to_f
   end
 end

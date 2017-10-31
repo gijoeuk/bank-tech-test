@@ -13,11 +13,11 @@ describe 'Transaction' do
     end
 
     it 'initializes with a balance true at the time transaction was created' do
-      expect(transaction.balance).to eq(1000)
+      expect(transaction.balance).to eq(1000.0)
     end
 
     it 'knows if amount is a credit or debit' do
-      expect(transaction.credit).to eq("1000")
+      expect(transaction.credit).to eq(1000.0)
     end
   end
 end
