@@ -10,9 +10,9 @@ class Statement
   end
 
   def transactions_log
-    to_return = ''
-    @transactions.reverse.each { |i| to_return += "#{i.date}|| #{i.credit} || #{i.debit} || #{i.balance}\n" }
-    to_return
+    trans = ''
+    @transactions.reverse.each { |i| trans += "#{i.date}|| #{i.credit} || #{i.debit} || #{i.balance}\n" }
+    trans
   end
 
   def print_transactions

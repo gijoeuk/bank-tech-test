@@ -1,9 +1,10 @@
-require 'Bank'
-require 'Statement'
+require 'bank'
+require 'statement'
 
 describe 'Bank' do
   let(:bank) { Bank.new }
   let(:date) { Date.new.strftime('%D') }
+  let(:transaction) { double Transaction.new(1000, 1000) }
 
   describe '#initialize' do
     it 'initializes as instance of Bank' do
@@ -31,17 +32,6 @@ describe 'Bank' do
       bank.deposit(1000)
       bank.withdraw(500)
       expect(bank.balance).to eq(500.0)
-    end
-  end
-
-  # chech it creates new instance and everything else that method does
-
-  describe '#print_statement' do
-    it 'enables account holder to print stament of all transactions' do
-      bank.deposit(1000)
-      bank.deposit(2000)
-      bank.withdraw(500)
-      expect(bank.print_statement).to eq("date || credit || debit || balance\n#{date}||  || 500.0 || 2500.0\n#{date}|| 2000.0 ||  || 3000.0\n#{date}|| 1000.0 ||  || 1000.0\n")
     end
   end
 end
